@@ -46,7 +46,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
         RecyclerViewItem recyclerViewItem = arrayList.get(position);
-
         holder.imageView.setImageResource(recyclerViewItem.getImageResource());
         holder.textView1.setText(recyclerViewItem.getText1());
         holder.textView2.setText(recyclerViewItem.getText2());
@@ -55,6 +54,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.RecyclerViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrayList.size();
     }
 }
